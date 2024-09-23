@@ -1,0 +1,60 @@
+&OBJECT
+FILENAME="Earth_N_denorm2" !"Itokawa_Hayabusa_50k_poly" 
+SCA=1.d3
+SIGMA=1.673d0
+PERIOD=86400.d0 !43675.2d0 !15466.d0 !86400.d0
+/
+&SH
+NMAX=2
+/
+&FLAGS_PH
+FLAG_ALREADY_SHIFTED=.false.
+FLAG_GEN=.true.
+FLAG_SHIFT_COM=.true.
+FLAG_DENORM=.true.
+FLAG_NO_SIGMA=.false.
+/
+&ORBEL
+A=4.0000d6
+E=0.001d0 !0.57637d0
+INC=30.d0!14.20890d0
+OM=0.d0!45.d0
+BOM=0.d0!30.d0
+AMEAN=180.d0
+/
+&TIME
+TIME0=0.d0
+TOT_TIME=150.d0
+TIME_STEP=1.d0
+TYPE_TIME(:)="d","m"
+/
+&DYN
+DYN_VEC(:)=.true.,.false.,.true., .true.
+FLAG_FULL_SH=.false.
+FLAG_ALT_J2=.false.
+FLAG_ABM=.false.
+/
+&SRP
+ARE2MS=1.0d0
+JSRP=1
+KSRP=-1
+RESANG0=90.d0
+FLAG_ALL_TM=.true.
+/
+&FLAGS_PROP
+FLAG_SD=.true.
+FLAG_HAM=.true.
+FLAG_POLY=.false.
+/
+&COMPARE
+WHAT="polySH" !"polySH"
+ABORT_POLY=.false.
+/
+&FLI
+GRID=30
+DELTA=500.d3
+RESO_TYPE='11'
+MAX_STEPS=2000
+MAXFLI=10.d0
+DYN_TYPE='SH'
+V_0=1.d0,1.d0,1.d0,1.d0,1.d0,1.d0
